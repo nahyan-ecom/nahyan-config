@@ -1,0 +1,67 @@
+spring:
+  application:
+    name: inventory-service
+  datasource:
+    url: jdbc:h2:mem:inventory-service-db
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /inventory-service-db
+      settings:
+        trace: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 0
+springdoc:
+  api-docs:
+    path: /api/v1/inventory/api-docs
+jwt:
+  public-key: classpath:app.pub
+object-storage:
+  bucket-name: nahyan-bucket
+  bucket-namespace: axatsxh4z3ll
+  tenant-id: ocid1.tenancy.oc1..aaaaaaaaibk3qbzdsxamoib2tzrd3a5rvs7bzh5samlkimnzf7tassjj7xpq
+  user-id: ocid1.user.oc1..aaaaaaaat5vfxbav7cl2hyq756oolaq6ftqynnda2iybzznelsh2jb6uo7wq
+  fingerprint: 77:dd:cc:79:b4:c6:6d:4a:ec:6e:31:f2:6f:25:14:0e
+  access-key: db74e86850d0ad406081c8fdac24ed4158610be9
+  secret-key: FCZe/K0fMBNtE+Y8Rqi3S2Lqjcwu/iDiesY5pMRYThI=
+  region: me-dubai-1
+  pass-phrase: |
+    -----BEGIN PRIVATE KEY-----
+    MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpU5CXnIGcHI9J
+    4Bjgk2fn1SARj0+JnHZaihu4GixzgV4RCKRoalr8X1tgMe6STbeOrZjE6LiUnIkg
+    PTmtbJtmUHMD0REjbVhWM1jVODkCxmQN2bEcIZaLA+2MmgB4cQlyHqHKE27R+UiL
+    nelUTBEVFJjZWE0etKZ94elU3EJoU/yyuuk6mTfI+zDYh1vK+fdMWXNWIBAAhLhx
+    r69o6ipu1USDQuvqvp8bC1rLmPxYO5MB0WSKmUdOVlZiq6dnoyX4ofYTzz+leTFQ
+    vz8Bo9vpc1ODpuu/atNAVsoUT25kDIxiIuHyG/jZt6bgZ3NyTq0baBdqh2VcXe0D
+    yGLcBMtDAgMBAAECggEABMwORhcqKD3X0RQ12NUWuG5Ow+RIf5Q/RdROcc8t3dPc
+    DTkudMI5ETV4O6LnHtjmMig4vCcUoIzmct1LpWgSXXUmyVNHg48LQgVQYkW6L8Fm
+    py9WhAiqVvKqsatHQr/N/z3BifZJ5utIhWfFV1f2zrLGdJAJecCvX8DYVL82k1gJ
+    /g5xn6dAPBurVpOMYB2C4sGySbZM/mBrZ1j4HLDrgUbfZGYWa0+fiYrta34GtdHO
+    xDMaM5H6cIneNOvhomyEJWn77YPg7/OvfEaIFNyQI9OI3QfFWDP8SjMXeIyD8tgM
+    d0afM7QPurI5qaelymgCC/+x1Qbma6Ab+EaC/OJOQQKBgQDRqTbid/pA8ILnnvxz
+    U5Lu2xVqDbVtsQbCvvt0jzdAGEXSSrVRjtKbNNnxp4fZeAe5cEw5Sc2AtNuaFw5S
+    bVUuIwbeh8ZUXqcjUVAj8/FLCZK+OKNNEDN3kou7zPhxEIalDrCWB/ezPYRhW+wn
+    g+B2rejTzv8MJkE+gz4JgvryYwKBgQDOwDBAFWMhGpoGtjOQDBAa5FjGk+H+VM/2
+    +1CuWwEbxyfpk51jhgMFBZN65rvd7OlYjfbKQ0jtOuIovX2xBJ05KslvoCu1WL5t
+    E5KbsaoHHGX0ngEjrZ9LNsAfti+wXHF0aAKfVwe+1EKJjRU0SyJ0SB1Gtgrb2UnY
+    ZXMbRMWpoQKBgQCv98L97s7WhEaKWlDuBn3zBWQCwAC/UO4os5xe5vjrTbQEXPmz
+    uxiedYxam06Uwn5RMKR5DK1zUdhiiulVWzg74eAZE4HtPAgxx0Ro+IxTe3RzPRwq
+    SOe5ewDWnaEDXGh1zk99jLBj+sTJ5hndzHyvfyVD6J79tnnaGtMNrqYqmwKBgFZC
+    ax8hjTVPkvm/5O1xivqdUMixBHYHTqkeG4BTKbg8NFPIqb7PN81NkUWSpMknwgeX
+    W2LyBagsjBUxUhKb+TjTuC1hZzsHJpP9uYpJ6sWCvKr9jT4kfzRzSF8ytNzhBNjr
+    WETAm9OrXYNkIHer7VkUiVpqM0ecdanaUdcLr2hhAoGAXglhfLKTRfZNXO0QVKrG
+    oWyzLZoVnyNmirMq4tTBJoYpLZrw8Qotl4gp/5ZmoYekqGkZkZolqfVnFoqhcEN3
+    Jq4Tt/De52i8S5arC692xnRC1i0aONPNv1wycuk0b1ecDZDyu3nY6FUOV/mXFMyf
+    DSPWqMEbauwZlWhaYYQmvdY=
+    -----END PRIVATE KEY-----
